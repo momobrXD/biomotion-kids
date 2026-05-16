@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Biomotion Kids - Juego educativo de inglés con movimiento corporal. Aprende inglés jugando con tu webcam. Diseñado para niños con TDAH." />
+  <meta name="keywords" content="Biomotion Kids, juego educativo, inglés, niños, TDAH, MediaPipe, Unity, movimiento corporal" />
+  <meta property="og:title" content="Biomotion Kids - Aprende Inglés Moviéndote" />
+  <meta property="og:description" content="Juego educativo que enseña inglés con movimiento corporal usando IA y webcam." />
+  <meta property="og:image" content="assets/logo.png" />
+  <title>Biomotion Kids · Aprende Inglés Moviéndote</title>
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Decoración global: textura grain -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- =================== NAV =================== -->
+  <nav class="nav">
+    <a href="#hero" class="nav__brand">
+      <img src="assets/logo.png" alt="Biomotion Kids" class="nav__logo" />
+    </a>
+    <ul class="nav__links">
+      <li><a href="#about">El Juego</a></li>
+      <li><a href="#trailer">Trailer</a></li>
+      <li><a href="#minigames">Minijuegos</a></li>
+      <li><a href="#how">Cómo Jugar</a></li>
+      <li><a href="#team">Equipo</a></li>
+      <li><a href="#download" class="nav__cta">Descargar</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Abrir menú" id="navBurger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- =================== HERO =================== -->
+  <header id="hero" class="hero">
+    <!-- Decoraciones flotantes -->
+    <div class="hero__decor" aria-hidden="true">
+      <svg class="hero__cloud hero__cloud--1" viewBox="0 0 200 80"><ellipse cx="60" cy="50" rx="55" ry="25" fill="#fff"/><ellipse cx="110" cy="40" rx="40" ry="30" fill="#fff"/><ellipse cx="150" cy="55" rx="45" ry="22" fill="#fff"/></svg>
+      <svg class="hero__cloud hero__cloud--2" viewBox="0 0 200 80"><ellipse cx="60" cy="50" rx="55" ry="25" fill="#fff"/><ellipse cx="110" cy="40" rx="40" ry="30" fill="#fff"/><ellipse cx="150" cy="55" rx="45" ry="22" fill="#fff"/></svg>
+      <svg class="hero__sun" viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="#FFD56B"/><circle cx="50" cy="50" r="45" fill="#FFD56B" opacity="0.3"/><circle cx="50" cy="50" r="55" fill="#FFD56B" opacity="0.15"/></svg>
+      <div class="hero__block hero__block--a">A</div>
+      <div class="hero__block hero__block--b">B</div>
+      <div class="hero__block hero__block--c">C</div>
+    </div>
+
+    <div class="hero__content">
+      <img src="assets/logo.png" alt="Biomotion Kids" class="hero__logo" />
+      <p class="hero__tagline">
+        Aprende inglés <span class="hero__highlight">moviéndote</span>.<br/>
+        Sin teclado. Sin mando. Solo tu cuerpo y tu webcam.
+      </p>
+      <p class="hero__subtag">
+        Un juego diseñado para niños de 6 a 10 años · Especial para chicos con TDAH
+      </p>
+      <div class="hero__ctas">
+        <a href="#download" class="btn btn--primary">
+          <span class="btn__icon">⬇</span> Descargar Gratis
+        </a>
+        <a href="#trailer" class="btn btn--ghost">
+          <span class="btn__icon">▶</span> Ver Trailer
+        </a>
+      </div>
+      <div class="hero__badges">
+        <span class="badge">🎓 Trabajo de Grado</span>
+        <span class="badge">🇪🇨 Hecho en Ecuador</span>
+        <span class="badge">🎮 100% Gratis</span>
+      </div>
+    </div>
+
+    <!-- Olas SVG abajo -->
+    <svg class="hero__waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,64 C240,96 480,32 720,48 C960,64 1200,112 1440,80 L1440,120 L0,120 Z" fill="#FAF0D7"/>
+    </svg>
+  </header>
+
+  <!-- =================== ABOUT =================== -->
+  <section id="about" class="about">
+    <div class="container">
+      <span class="eyebrow">Sobre el juego</span>
+      <h2 class="section__title">
+        Aprender inglés <em>es jugar</em>.
+      </h2>
+      <p class="section__lead">
+        Biomotion Kids usa la cámara de tu computadora para detectar tu cuerpo en tiempo real.
+        Cada minijuego pide gestos, posturas o movimientos para responder. Aprendes palabras
+        nuevas mientras te mueves. Sin pantallas que apaguen tu energía.
+      </p>
+
+      <div class="cards">
+        <article class="card card--tilt-left">
+          <div class="card__icon" style="background:#5BA8D6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/></svg>
+          </div>
+          <h3>Visión por Computadora</h3>
+          <p>Tu webcam y un sistema de IA basado en MediaPipe detectan 33 puntos de tu cuerpo. Te conviertes en el controlador.</p>
+        </article>
+
+        <article class="card card--tilt-right">
+          <div class="card__icon" style="background:#4A8B3A">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3>Diseñado para TDAH</h3>
+          <p>Sesiones cortas. Refuerzo inmediato. El cuerpo en movimiento ayuda a concentrarse en lugar de distraer.</p>
+        </article>
+
+        <article class="card card--tilt-left">
+          <div class="card__icon" style="background:#E67E22">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>
+          </div>
+          <h3>Vocabulario Real</h3>
+          <p>Colores, tamaños, números, posturas y verbos. Cada palabra se asocia a un movimiento. Aprendizaje multisensorial.</p>
+        </article>
+
+        <article class="card card--tilt-right">
+          <div class="card__icon" style="background:#F4A93D">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 2 15 8.5 22 9.5 17 14.5 18.5 21.5 12 18 5.5 21.5 7 14.5 2 9.5 9 8.5Z"/></svg>
+          </div>
+          <h3>Sistema de Progreso</h3>
+          <p>4 islas, 4 minijuegos, 12 niveles. Cada logro se queda guardado. Aventura completa para llegar al final.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== TRAILER =================== -->
+  <section id="trailer" class="trailer">
+    <div class="container">
+      <span class="eyebrow eyebrow--light">Mirá cómo se juega</span>
+      <h2 class="section__title section__title--light">
+        Trailer Oficial
+      </h2>
+      <div class="trailer__frame">
+        <!-- 
+          OPCIÓN A: Video local (default).
+          Reemplazá assets/trailer.mp4 con tu archivo.
+        -->
+        <video controls poster="assets/menu.png" preload="metadata">
+          <source src="assets/trailer.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+
+        <!-- 
+          OPCIÓN B: Si subís el trailer a YouTube, comentá el <video> de arriba
+          y descomentá este bloque. Reemplazá VIDEO_ID con el ID de tu video.
+          (ejemplo: si la URL es youtube.com/watch?v=dQw4w9WgXcQ, el ID es dQw4w9WgXcQ)
+
+        <iframe 
+          src="https://www.youtube.com/embed/VIDEO_ID" 
+          title="Biomotion Kids Trailer"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== MINIGAMES =================== -->
+  <section id="minigames" class="minigames">
+    <div class="container">
+      <span class="eyebrow">Cuatro mundos por descubrir</span>
+      <h2 class="section__title">Los Minijuegos</h2>
+      <p class="section__lead">Cada isla esconde una mecánica única. Cuatro maneras de aprender inglés con todo tu cuerpo.</p>
+
+      <div class="games">
+
+        <article class="game">
+          <div class="game__img">
+            <img src="assets/game-colorjump.png" alt="Mundo de Colores - Color Jump" loading="lazy" />
+            <span class="game__island">🌲 Wonder Realm</span>
+          </div>
+          <div class="game__body">
+            <span class="game__tag" style="--tag:#4A8B3A">Color Jump</span>
+            <h3>Mundo de Colores</h3>
+            <p>Aparece una palabra de color en inglés. Salta a la plataforma del color correcto antes que se acabe el tiempo.</p>
+            <ul class="game__skills">
+              <li>🎨 Colores</li>
+              <li>🦘 Salto lateral</li>
+              <li>⚡ Reflejos</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="game">
+          <div class="game__img">
+            <img src="assets/game-mirrorword.png" alt="Desafío de Posiciones - Mirror Word" loading="lazy" />
+            <span class="game__island">🏝️ Mystery Isle</span>
+          </div>
+          <div class="game__body">
+            <span class="game__tag" style="--tag:#E67E22">Mirror Word</span>
+            <h3>Desafío de Posiciones</h3>
+            <p>Aparece una postura ("HANDS UP", "T-POSE"...). Imítala con tu cuerpo. El sistema valida ángulo por ángulo.</p>
+            <ul class="game__skills">
+              <li>🧍 Posturas</li>
+              <li>📐 Verbos de acción</li>
+              <li>🪞 Conciencia corporal</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="game">
+          <div class="game__img">
+            <img src="assets/game-sizesort.png" alt="Maestro de Palabras - Size Sort" loading="lazy" />
+            <span class="game__island">🏖️ Star Kingdom</span>
+          </div>
+          <div class="game__body">
+            <span class="game__tag" style="--tag:#5BA8D6">Size Sort</span>
+            <h3>Maestro de Palabras</h3>
+            <p>"BIG", "SMALL", "MEDIUM". Identifica el objeto correcto y señalalo con tu mano. Cada acierto suma puntos.</p>
+            <ul class="game__skills">
+              <li>📏 Tamaños</li>
+              <li>👆 Apuntar preciso</li>
+              <li>👁️ Atención visual</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="game">
+          <div class="game__img">
+            <img src="assets/game-balloonpop.png" alt="Explotar Globos - Balloon Pop" loading="lazy" />
+            <span class="game__island">🐉 Dragon's Den</span>
+          </div>
+          <div class="game__body">
+            <span class="game__tag" style="--tag:#F4A93D">Balloon Pop</span>
+            <h3>Explotar Globos</h3>
+            <p>Aparecen globos con números. La consigna te dice cuál explotar ("POP FIVE!"). Apunta y revienta el correcto.</p>
+            <ul class="game__skills">
+              <li>🔢 Números</li>
+              <li>🎯 Puntería</li>
+              <li>🧠 Memoria rápida</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== HOW TO PLAY =================== -->
+  <section id="how" class="how">
+    <div class="container">
+      <span class="eyebrow">Empezar es fácil</span>
+      <h2 class="section__title">Cómo Jugar</h2>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step__num">1</span>
+          <h3>Descargá el juego</h3>
+          <p>Bajá el archivo desde la sección Descarga. Pesa pocos megas. Descomprimí en tu PC.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">2</span>
+          <h3>Conectá tu webcam</h3>
+          <p>Cualquier cámara web funciona. Posicionate a 2 metros de la cámara. Espacio libre alrededor para moverte.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">3</span>
+          <h3>Abrí el detector</h3>
+          <p>Corré <code>pose_sender_udp.py</code> antes de abrir el juego. Es el cerebro que ve tu cuerpo.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">4</span>
+          <h3>¡Movete y aprendé!</h3>
+          <p>Elegí tu isla, elegí tu minijuego. El juego responde a tus movimientos en tiempo real.</p>
+        </div>
+      </div>
+
+      <!-- Imagen del selector de islas -->
+      <div class="how__map">
+        <h3 class="how__map-title">Tu mapa de aventura</h3>
+        <img src="assets/menu.png" alt="Selector de islas Biomotion Kids" loading="lazy" />
+        <p class="how__map-caption">Cuatro islas, doce niveles, un objetivo: dominar el inglés.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== TEAM =================== -->
+  <section id="team" class="team">
+    <div class="container">
+      <span class="eyebrow">Quiénes hacemos esto</span>
+      <h2 class="section__title">El Equipo</h2>
+
+      <div class="team__photo">
+        <img src="assets/team.png" alt="Equipo Biomotion Kids" loading="lazy" />
+      </div>
+
+      <div class="team__members">
+        <div class="member">
+          <div class="member__avatar" style="background:#5BA8D6">M</div>
+          <h3>Martin</h3>
+          <span class="member__role">Desarrollo · Unity / C#</span>
+          <p>Construye los minijuegos, el avatar y la integración con MediaPipe vía UDP.</p>
+        </div>
+        <div class="member">
+          <div class="member__avatar" style="background:#4A8B3A">E</div>
+          <h3>Esteban</h3>
+          <span class="member__role">Arte · Escenas y Menús</span>
+          <p>Diseña las islas, los escenarios y todo el universo visual del juego.</p>
+        </div>
+        <div class="member">
+          <div class="member__avatar" style="background:#E67E22">D</div>
+          <h3>David</h3>
+          <span class="member__role">Investigación · Audio · Contenido</span>
+          <p>Define el vocabulario en inglés, produce el audio y documenta el proyecto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== DOWNLOAD =================== -->
+  <section id="download" class="download">
+    <div class="container">
+      <div class="download__card">
+        <span class="eyebrow eyebrow--light">Listo para jugar</span>
+        <h2 class="download__title">Descargá Biomotion Kids</h2>
+        <p class="download__lead">Gratis. Sin registro. Sin anuncios. Solo movete y aprendé.</p>
+
+        <div class="download__meta">
+          <div class="download__meta-item">
+            <strong>v0.1.0</strong>
+            <span>Versión actual</span>
+          </div>
+          <div class="download__meta-item">
+            <strong>~ 200 MB</strong>
+            <span>Tamaño aprox.</span>
+          </div>
+          <div class="download__meta-item">
+            <strong>Windows 10/11</strong>
+            <span>Plataforma</span>
+          </div>
+          <div class="download__meta-item">
+            <strong>Webcam</strong>
+            <span>Requisito clave</span>
+          </div>
+        </div>
+
+        <div class="download__ctas">
+          <!-- REEMPLAZAR HREF cuando tengas el link real -->
+          <a href="#" class="btn btn--primary btn--big">
+            <span class="btn__icon">⬇</span> Descargar para Windows
+          </a>
+          <a href="https://github.com/enano12345ggl2uwu/ProyectoGrado" target="_blank" rel="noopener" class="btn btn--ghost btn--big">
+            <span class="btn__icon">⚙</span> Código en GitHub
+          </a>
+        </div>
+
+        <details class="download__reqs">
+          <summary>Requisitos completos del sistema</summary>
+          <ul>
+            <li><strong>SO:</strong> Windows 10 o 11 (64-bit)</li>
+            <li><strong>RAM:</strong> 4 GB mínimo · 8 GB recomendado</li>
+            <li><strong>GPU:</strong> Cualquier tarjeta con soporte DirectX 11</li>
+            <li><strong>Cámara web:</strong> Obligatoria · 720p o mejor</li>
+            <li><strong>Python 3.10+:</strong> Para el detector de poses (se instala aparte)</li>
+            <li><strong>Espacio físico:</strong> 2 m² mínimo enfrente de la cámara</li>
+            <li><strong>Iluminación:</strong> Buena luz frontal, evitar contraluz</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <img src="assets/logo.png" alt="Biomotion Kids" class="footer__logo" />
+        <p class="footer__desc">Juego educativo de inglés con movimiento corporal. Trabajo de grado 2026.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#about">El Juego</a></li>
+          <li><a href="#minigames">Minijuegos</a></li>
+          <li><a href="#how">Cómo Jugar</a></li>
+          <li><a href="#team">Equipo</a></li>
+          <li><a href="#download">Descargar</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Stack</h4>
+        <ul>
+          <li>Unity 2021.3.17f1</li>
+          <li>Python 3.10 + MediaPipe</li>
+          <li>Comunicación UDP</li>
+          <li>Animation Rigging</li>
+        </ul>
+      </div>
+      <div class="footer__col footer__col--school">
+        <img src="assets/logo-donbosco.png" alt="U.E.F. Don Bosco" class="footer__school" />
+        <p>Unidad Educativa Fiscomisional<br/><strong>"Don Bosco" - Quito</strong></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Biomotion Kids · Hecho con 🧠 y 🤸 en Ecuador</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
